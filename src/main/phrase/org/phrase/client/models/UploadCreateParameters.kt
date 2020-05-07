@@ -68,10 +68,10 @@ data class UploadCreateParameters (
     val fileEncoding: kotlin.String? = null,
     /* Optional, format specific mapping between locale names and the columns the translations to those locales are contained in. */
     @Json(name = "locale_mapping")
-    val localeMapping: kotlin.Any? = null,
+    val localeMapping: kotlin.collections.Map<kotlin.String, kotlin.String>? = null,
     /* Additional options available for specific formats. See our format guide for complete list. */
     @Json(name = "format_options")
-    val formatOptions: kotlin.Any? = null,
+    val formatOptions: kotlin.collections.Map<kotlin.String, kotlin.String>? = null,
     /* If set, translations for the uploaded language will be fetched automatically. */
     @Json(name = "autotranslate")
     val autotranslate: kotlin.Boolean? = null,

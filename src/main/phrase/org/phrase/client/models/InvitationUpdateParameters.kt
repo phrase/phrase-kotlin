@@ -33,6 +33,6 @@ data class InvitationUpdateParameters (
     val localeIds: kotlin.String? = null,
     /* Additional permissions depending on invitation role. */
     @Json(name = "permissions")
-    val permissions: kotlin.Any? = null
+    val permissions: kotlin.collections.Map<kotlin.String, kotlin.String>? = null
 )
 

@@ -36,7 +36,7 @@ data class DistributionUpdateParameters (
     val platforms: kotlin.Array<kotlin.String>? = null,
     /* Additional formatting and render options. Only <code>enclose_in_cdata</code> is available for platform <code>android</code>. */
     @Json(name = "format_options")
-    val formatOptions: kotlin.Any? = null,
+    val formatOptions: kotlin.collections.Map<kotlin.String, kotlin.String>? = null,
     /* Indicates whether to fallback to non regional locale when locale can not be found */
     @Json(name = "fallback_to_non_regional_locale")
     val fallbackToNonRegionalLocale: kotlin.Boolean? = null,

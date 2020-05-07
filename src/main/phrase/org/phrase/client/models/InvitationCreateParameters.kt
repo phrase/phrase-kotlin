@@ -37,6 +37,6 @@ data class InvitationCreateParameters (
     val localeIds: kotlin.String? = null,
     /* Additional permissions depending on invitation role. Available permissions are <code>create_upload</code> and <code>review_translations</code> */
     @Json(name = "permissions")
-    val permissions: kotlin.Any? = null
+    val permissions: kotlin.collections.Map<kotlin.String, kotlin.String>? = null
 )
 
