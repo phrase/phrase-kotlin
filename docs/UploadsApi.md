@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="uploadCreate"></a>
 # **uploadCreate**
-> uploadCreate(projectId, uploadCreateParameters, xminusPhraseAppMinusOTP)
+> uploadCreate(projectId, xminusPhraseAppMinusOTP, branch, file, fileFormat, localeId, tags, updateTranslations, updateDescriptions, convertEmoji, skipUploadTags, skipUnverification, fileEncoding, autotranslate, markReviewed)
 
 Upload a new file
 
@@ -25,10 +25,22 @@ Upload a new language file. Creates necessary resources in your project.
 
 val apiInstance = UploadsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
-val uploadCreateParameters : UploadCreateParameters =  // UploadCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
+val branch : kotlin.String = branch_example // kotlin.String | specify the branch to use
+val file : java.io.File = BINARY_DATA_HERE // java.io.File | File to be imported
+val fileFormat : kotlin.String = fileFormat_example // kotlin.String | File format. Auto-detected when possible and not specified.
+val localeId : kotlin.String = localeId_example // kotlin.String | Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id.
+val tags : kotlin.String = tags_example // kotlin.String | List of tags separated by comma to be associated with the new keys contained in the upload.
+val updateTranslations : kotlin.Boolean = true // kotlin.Boolean | Indicates whether existing translations should be updated with the file content.
+val updateDescriptions : kotlin.Boolean = true // kotlin.Boolean | Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions.
+val convertEmoji : kotlin.Boolean = true // kotlin.Boolean | This option is obsolete. Providing the option will cause a bad request error.
+val skipUploadTags : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the upload should not create upload tags.
+val skipUnverification : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the upload should unverify updated translations.
+val fileEncoding : kotlin.String = fileEncoding_example // kotlin.String | Enforces a specific encoding on the file contents. Valid options are \\\"UTF-8\\\", \\\"UTF-16\\\" and \\\"ISO-8859-1\\\".
+val autotranslate : kotlin.Boolean = true // kotlin.Boolean | If set, translations for the uploaded language will be fetched automatically.
+val markReviewed : kotlin.Boolean = true // kotlin.Boolean | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project.
 try {
-    apiInstance.uploadCreate(projectId, uploadCreateParameters, xminusPhraseAppMinusOTP)
+    apiInstance.uploadCreate(projectId, xminusPhraseAppMinusOTP, branch, file, fileFormat, localeId, tags, updateTranslations, updateDescriptions, convertEmoji, skipUploadTags, skipUnverification, fileEncoding, autotranslate, markReviewed)
 } catch (e: ClientException) {
     println("4xx response calling UploadsApi#uploadCreate")
     e.printStackTrace()
@@ -43,8 +55,20 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectId** | **kotlin.String**| Project ID |
- **uploadCreateParameters** | [**UploadCreateParameters**](UploadCreateParameters.md)|  |
  **xminusPhraseAppMinusOTP** | **kotlin.String**| Two-Factor-Authentication token (optional) | [optional]
+ **branch** | **kotlin.String**| specify the branch to use | [optional]
+ **file** | **java.io.File**| File to be imported | [optional]
+ **fileFormat** | **kotlin.String**| File format. Auto-detected when possible and not specified. | [optional]
+ **localeId** | **kotlin.String**| Locale of the file&#39;s content. Can be the name or public id of the locale. Preferred is the public id. | [optional]
+ **tags** | **kotlin.String**| List of tags separated by comma to be associated with the new keys contained in the upload. | [optional]
+ **updateTranslations** | **kotlin.Boolean**| Indicates whether existing translations should be updated with the file content. | [optional]
+ **updateDescriptions** | **kotlin.Boolean**| Existing key descriptions will be updated with the file content. Empty descriptions overwrite existing descriptions. | [optional]
+ **convertEmoji** | **kotlin.Boolean**| This option is obsolete. Providing the option will cause a bad request error. | [optional]
+ **skipUploadTags** | **kotlin.Boolean**| Indicates whether the upload should not create upload tags. | [optional]
+ **skipUnverification** | **kotlin.Boolean**| Indicates whether the upload should unverify updated translations. | [optional]
+ **fileEncoding** | **kotlin.String**| Enforces a specific encoding on the file contents. Valid options are \\\&quot;UTF-8\\\&quot;, \\\&quot;UTF-16\\\&quot; and \\\&quot;ISO-8859-1\\\&quot;. | [optional]
+ **autotranslate** | **kotlin.Boolean**| If set, translations for the uploaded language will be fetched automatically. | [optional]
+ **markReviewed** | **kotlin.Boolean**| Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project. | [optional]
 
 ### Return type
 
@@ -62,7 +86,7 @@ Configure Token:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: multipart/form-data
  - **Accept**: Not defined
 
 <a name="uploadShow"></a>
