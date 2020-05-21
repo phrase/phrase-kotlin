@@ -20,8 +20,8 @@ Export translations from Phrase to Bitbucket according to the .phraseapp.yml fil
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = BitbucketSyncApi()
 val id : kotlin.String = id_example // kotlin.String | ID
@@ -77,8 +77,8 @@ Import translations from Bitbucket to Phrase according to the .phraseapp.yml fil
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = BitbucketSyncApi()
 val id : kotlin.String = id_example // kotlin.String | ID
@@ -133,8 +133,8 @@ List all Bitbucket repositories for which synchronisation with Phrase is activat
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = BitbucketSyncApi()
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)

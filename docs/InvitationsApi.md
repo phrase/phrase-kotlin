@@ -23,8 +23,8 @@ Invite a person to an account. Developers and translators need &lt;code&gt;proje
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = InvitationsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -79,8 +79,8 @@ Delete an existing invitation (must not be accepted yet). Access token scope mus
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = InvitationsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -135,8 +135,8 @@ Resend the invitation email (must not be accepted yet). Access token scope must 
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = InvitationsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -192,8 +192,8 @@ Get details on a single invitation. Access token scope must include &lt;code&gt;
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = InvitationsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -249,8 +249,8 @@ Update an existing invitation (must not be accepted yet). The &lt;code&gt;email&
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = InvitationsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -308,8 +308,8 @@ List invitations for an account. It will also list the accessible resources like
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = InvitationsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID

@@ -22,8 +22,8 @@ Create a new rule for blacklisting keys.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = BlacklistedKeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -78,8 +78,8 @@ Delete an existing rule for blacklisting keys.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = BlacklistedKeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -134,8 +134,8 @@ Get details on a single rule for blacklisting keys for a given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = BlacklistedKeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -191,8 +191,8 @@ Update an existing rule for blacklisting keys.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = BlacklistedKeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -250,8 +250,8 @@ List all rules for blacklisting keys for the given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = BlacklistedKeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID

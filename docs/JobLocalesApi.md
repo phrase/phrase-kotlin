@@ -24,8 +24,8 @@ Mark a job locale as completed.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobLocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -85,8 +85,8 @@ Delete an existing job locale.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobLocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -145,8 +145,8 @@ Mark a job locale as uncompleted.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobLocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -206,8 +206,8 @@ Get a single job locale for a given job.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobLocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -267,8 +267,8 @@ Update an existing job locale.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobLocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -328,8 +328,8 @@ Create a new job locale.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobLocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -386,8 +386,8 @@ List all job locales for a given job.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobLocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID

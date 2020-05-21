@@ -21,8 +21,8 @@ Create a new tag.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TagsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -77,8 +77,8 @@ Delete an existing tag.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TagsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -135,8 +135,8 @@ Get details and progress information on a single tag for a given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TagsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -194,8 +194,8 @@ List all tags for the given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TagsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID

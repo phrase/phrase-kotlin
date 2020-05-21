@@ -23,8 +23,8 @@ Create a new release.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ReleasesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -81,8 +81,8 @@ Delete an existing release.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ReleasesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -139,8 +139,8 @@ Publish a release for production.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ReleasesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -198,8 +198,8 @@ Get details on a single release.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ReleasesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -257,8 +257,8 @@ Update an existing release.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ReleasesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -318,8 +318,8 @@ List all releases for the given distribution.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ReleasesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID

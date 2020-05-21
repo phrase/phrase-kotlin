@@ -20,8 +20,8 @@ Create a new glossary term translation.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GlossaryTermTranslationsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -80,8 +80,8 @@ Delete an existing glossary term translation.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GlossaryTermTranslationsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -140,8 +140,8 @@ Update an existing glossary term translation.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GlossaryTermTranslationsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID

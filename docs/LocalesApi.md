@@ -23,8 +23,8 @@ Create a new locale.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = LocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -79,8 +79,8 @@ Delete an existing locale.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = LocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -137,8 +137,8 @@ Download a locale in a specific file format.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = LocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -221,8 +221,8 @@ Get details on a single locale for a given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = LocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -280,8 +280,8 @@ Update an existing locale.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = LocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -339,8 +339,8 @@ List all locales for the given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = LocalesApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID

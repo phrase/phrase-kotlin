@@ -22,8 +22,8 @@ Confirm an existing order and send it to the provider for translation. Same cons
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = OrdersApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -81,8 +81,8 @@ Create a new order. Access token scope must include &lt;code&gt;orders.create&lt
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = OrdersApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -137,8 +137,8 @@ Cancel an existing order. Must not yet be confirmed.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = OrdersApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -195,8 +195,8 @@ Get details on a single order.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = OrdersApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -254,8 +254,8 @@ List all orders for the given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = OrdersApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID

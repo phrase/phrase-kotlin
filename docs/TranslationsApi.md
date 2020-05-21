@@ -34,8 +34,8 @@ Create a translation.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -90,8 +90,8 @@ Set exclude from export flag on an existing translation.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -149,8 +149,8 @@ Remove exclude from export flag from an existing translation.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -208,8 +208,8 @@ Mark an existing translation as reviewed.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -267,8 +267,8 @@ Get details on a single translation.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -326,8 +326,8 @@ Mark an existing translation as unverified.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -385,8 +385,8 @@ Update an existing translation.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -444,8 +444,8 @@ Verify an existing translation.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -503,8 +503,8 @@ List translations for a specific key.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -572,8 +572,8 @@ List translations for a specific locale. If you want to download all translation
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -641,8 +641,8 @@ Exclude translations matching query from locale export.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -698,8 +698,8 @@ Include translations matching query in locale export.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -755,8 +755,8 @@ List translations for the given project. If you want to download all translation
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -822,8 +822,8 @@ Review translations matching query.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -879,8 +879,8 @@ Search translations for the given project. Provides the same search interface as
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -940,8 +940,8 @@ Mark translations matching query as unverified.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -997,8 +997,8 @@ Verify translations matching query.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = TranslationsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID

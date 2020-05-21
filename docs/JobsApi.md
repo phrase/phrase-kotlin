@@ -27,8 +27,8 @@ Mark a job as completed.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -86,8 +86,8 @@ Create a new job.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -142,8 +142,8 @@ Delete an existing job.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -200,8 +200,8 @@ Add multiple keys to a existing job.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -259,8 +259,8 @@ Remove multiple keys from existing job.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -319,8 +319,8 @@ Mark a job as uncompleted.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -378,8 +378,8 @@ Get details on a single job for a given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -437,8 +437,8 @@ Starts an existing job in state draft.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -496,8 +496,8 @@ Update an existing job.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -555,8 +555,8 @@ List all jobs for the given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = JobsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID

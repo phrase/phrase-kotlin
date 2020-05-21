@@ -25,8 +25,8 @@ Create a new Space.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = SpacesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -81,8 +81,8 @@ Delete the specified Space.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = SpacesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -137,8 +137,8 @@ Show the specified Space.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = SpacesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -194,8 +194,8 @@ Update the specified Space.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = SpacesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -253,8 +253,8 @@ List all Spaces for the given account.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = SpacesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -312,8 +312,8 @@ Adds an existing project to the space.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = SpacesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -370,8 +370,8 @@ Removes a specified project from the specified space.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = SpacesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -428,8 +428,8 @@ List all projects for the specified Space.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = SpacesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID

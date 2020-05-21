@@ -22,8 +22,8 @@ Create a new screenshot marker.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ScreenshotMarkersApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -80,8 +80,8 @@ Delete an existing screenshot marker.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ScreenshotMarkersApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -136,8 +136,8 @@ Get details on a single screenshot marker for a given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ScreenshotMarkersApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -195,8 +195,8 @@ Update an existing screenshot marker.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ScreenshotMarkersApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -254,8 +254,8 @@ List all screenshot markers for the given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ScreenshotMarkersApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID

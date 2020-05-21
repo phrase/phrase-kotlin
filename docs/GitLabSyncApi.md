@@ -24,8 +24,8 @@ Deletes a single GitLab Sync Setting.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GitLabSyncApi()
 val id : kotlin.String = id_example // kotlin.String | ID
@@ -80,8 +80,8 @@ Export translations from Phrase to GitLab according to the .phraseapp.yml file w
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GitLabSyncApi()
 val gitlabSyncId : kotlin.String = gitlabSyncId_example // kotlin.String | Gitlab Sync ID
@@ -137,8 +137,8 @@ List history for a single Sync Setting.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GitLabSyncApi()
 val gitlabSyncId : kotlin.String = gitlabSyncId_example // kotlin.String | Gitlab Sync ID
@@ -198,8 +198,8 @@ Import translations from GitLab to Phrase according to the .phraseapp.yml file w
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GitLabSyncApi()
 val gitlabSyncId : kotlin.String = gitlabSyncId_example // kotlin.String | Gitlab Sync ID
@@ -255,8 +255,8 @@ List all GitLab Sync Settings for which synchronisation with Phrase and GitLab i
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GitLabSyncApi()
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
@@ -310,8 +310,8 @@ Shows a single GitLab Sync Setting.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GitLabSyncApi()
 val id : kotlin.String = id_example // kotlin.String | ID
@@ -367,8 +367,8 @@ Updates a single GitLab Sync Setting.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GitLabSyncApi()
 val id : kotlin.String = id_example // kotlin.String | ID

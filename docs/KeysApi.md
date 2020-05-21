@@ -26,8 +26,8 @@ Create a new key.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = KeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -82,8 +82,8 @@ Delete an existing key.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = KeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -140,8 +140,8 @@ Get details on a single key for a given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = KeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -199,8 +199,8 @@ Update an existing key.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = KeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -258,8 +258,8 @@ Delete all keys matching query. Same constraints as list. Please limit the numbe
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = KeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -319,8 +319,8 @@ List all keys for the given project. Alternatively you can POST requests to /sea
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = KeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -388,8 +388,8 @@ Search keys for the given project matching query.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = KeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -449,8 +449,8 @@ Tags all keys matching query. Same constraints as list.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = KeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -506,8 +506,8 @@ Removes specified tags from keys matching query.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = KeysApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID

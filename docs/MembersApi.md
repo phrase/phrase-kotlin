@@ -21,8 +21,8 @@ Remove a user from the account. The user will be removed from the account but no
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = MembersApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -77,8 +77,8 @@ Get details on a single user in the account. Access token scope must include &lt
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = MembersApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -134,8 +134,8 @@ Update user permissions in the account. Developers and translators need &lt;code
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = MembersApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -193,8 +193,8 @@ Get all users active in the account. It also lists resources like projects and l
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = MembersApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID

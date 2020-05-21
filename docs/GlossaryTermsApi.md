@@ -22,8 +22,8 @@ Create a new glossary term.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GlossaryTermsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -80,8 +80,8 @@ Delete an existing glossary term.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GlossaryTermsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -138,8 +138,8 @@ Get details on a single glossary term.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GlossaryTermsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -197,8 +197,8 @@ Update an existing glossary term.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GlossaryTermsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
@@ -258,8 +258,8 @@ List all glossary terms the current user has access to.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = GlossaryTermsApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID

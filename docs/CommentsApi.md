@@ -25,8 +25,8 @@ Create a new comment for a key.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = CommentsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -83,8 +83,8 @@ Delete an existing comment.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = CommentsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -143,8 +143,8 @@ Check if comment was marked as read. Returns 204 if read, 404 if unread.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = CommentsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -203,8 +203,8 @@ Mark a comment as read.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = CommentsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -263,8 +263,8 @@ Mark a comment as unread.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = CommentsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -323,8 +323,8 @@ Get details on a single comment.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = CommentsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -384,8 +384,8 @@ Update an existing comment.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = CommentsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -445,8 +445,8 @@ List all comments for a key.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = CommentsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID

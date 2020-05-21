@@ -20,8 +20,8 @@ Upload a new language file. Creates necessary resources in your project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = UploadsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -100,8 +100,8 @@ View details and summary for a single upload.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = UploadsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
@@ -159,8 +159,8 @@ List all uploads for the given project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = UploadsApi()
 val projectId : kotlin.String = projectId_example // kotlin.String | Project ID

@@ -22,8 +22,8 @@ Create a new project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ProjectsApi()
 val projectCreateParameters : ProjectCreateParameters =  // ProjectCreateParameters | 
@@ -76,8 +76,8 @@ Delete an existing project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ProjectsApi()
 val id : kotlin.String = id_example // kotlin.String | ID
@@ -130,8 +130,8 @@ Get details on a single project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ProjectsApi()
 val id : kotlin.String = id_example // kotlin.String | ID
@@ -185,8 +185,8 @@ Update an existing project.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ProjectsApi()
 val id : kotlin.String = id_example // kotlin.String | ID
@@ -242,8 +242,8 @@ List all projects the current user has access to.
 ### Example
 ```kotlin
 // Import classes:
-//import org.phrase.client.infrastructure.*
-//import org.phrase.client.models.*
+//import com.phrase.client.infrastructure.*
+//import com.phrase.client.models.*
 
 val apiInstance = ProjectsApi()
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
