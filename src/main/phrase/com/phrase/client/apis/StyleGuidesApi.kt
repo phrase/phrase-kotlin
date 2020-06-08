@@ -42,13 +42,14 @@ class StyleGuidesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(base
     * @param projectId Project ID 
     * @param styleguideCreateParameters  
     * @param xminusPhraseAppMinusOTP Two-Factor-Authentication token (optional) (optional)
-    * @return void
+    * @return StyleguideDetails
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
+    @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun styleguideCreate(projectId: kotlin.String, styleguideCreateParameters: StyleguideCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Unit {
+    fun styleguideCreate(projectId: kotlin.String, styleguideCreateParameters: StyleguideCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : StyleguideDetails {
         val localVariableBody: kotlin.Any? = styleguideCreateParameters
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf("X-PhraseApp-OTP" to xminusPhraseAppMinusOTP.toString())
@@ -58,13 +59,13 @@ class StyleGuidesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(base
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<Any?>(
+        val localVarResponse = request<StyleguideDetails>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
+            ResponseType.Success -> (localVarResponse as Success<*>).data as StyleguideDetails
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

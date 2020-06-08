@@ -46,13 +46,14 @@ class KeysApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
     * @param projectId Project ID 
     * @param keyCreateParameters  
     * @param xminusPhraseAppMinusOTP Two-Factor-Authentication token (optional) (optional)
-    * @return void
+    * @return TranslationKeyDetails
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
+    @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun keyCreate(projectId: kotlin.String, keyCreateParameters: KeyCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Unit {
+    fun keyCreate(projectId: kotlin.String, keyCreateParameters: KeyCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : TranslationKeyDetails {
         val localVariableBody: kotlin.Any? = keyCreateParameters
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf("X-PhraseApp-OTP" to xminusPhraseAppMinusOTP.toString())
@@ -62,13 +63,13 @@ class KeysApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<Any?>(
+        val localVarResponse = request<TranslationKeyDetails>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
+            ResponseType.Success -> (localVarResponse as Success<*>).data as TranslationKeyDetails
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

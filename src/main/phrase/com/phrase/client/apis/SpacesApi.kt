@@ -43,13 +43,14 @@ class SpacesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     * @param accountId Account ID 
     * @param spaceCreateParameters  
     * @param xminusPhraseAppMinusOTP Two-Factor-Authentication token (optional) (optional)
-    * @return void
+    * @return Space
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
+    @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun spaceCreate(accountId: kotlin.String, spaceCreateParameters: SpaceCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Unit {
+    fun spaceCreate(accountId: kotlin.String, spaceCreateParameters: SpaceCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Space {
         val localVariableBody: kotlin.Any? = spaceCreateParameters
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf("X-PhraseApp-OTP" to xminusPhraseAppMinusOTP.toString())
@@ -59,13 +60,13 @@ class SpacesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<Any?>(
+        val localVarResponse = request<Space>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
+            ResponseType.Success -> (localVarResponse as Success<*>).data as Space
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

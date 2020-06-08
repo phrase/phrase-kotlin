@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="screenshotCreate"></a>
 # **screenshotCreate**
-> screenshotCreate(projectId, screenshotCreateParameters, xminusPhraseAppMinusOTP)
+> Screenshot screenshotCreate(projectId, screenshotCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a screenshot
 
@@ -30,7 +30,8 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val screenshotCreateParameters : ScreenshotCreateParameters =  // ScreenshotCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.screenshotCreate(projectId, screenshotCreateParameters, xminusPhraseAppMinusOTP)
+    val result : Screenshot = apiInstance.screenshotCreate(projectId, screenshotCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling ScreenshotsApi#screenshotCreate")
     e.printStackTrace()
@@ -50,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Screenshot**](Screenshot.md)
 
 ### Authorization
 
@@ -65,7 +66,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="screenshotDelete"></a>
 # **screenshotDelete**

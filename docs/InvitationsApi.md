@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="invitationCreate"></a>
 # **invitationCreate**
-> invitationCreate(accountId, invitationCreateParameters, xminusPhraseAppMinusOTP)
+> Invitation invitationCreate(accountId, invitationCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a new invitation
 
@@ -31,7 +31,8 @@ val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
 val invitationCreateParameters : InvitationCreateParameters =  // InvitationCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.invitationCreate(accountId, invitationCreateParameters, xminusPhraseAppMinusOTP)
+    val result : Invitation = apiInstance.invitationCreate(accountId, invitationCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling InvitationsApi#invitationCreate")
     e.printStackTrace()
@@ -51,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Invitation**](Invitation.md)
 
 ### Authorization
 
@@ -66,7 +67,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="invitationDelete"></a>
 # **invitationDelete**

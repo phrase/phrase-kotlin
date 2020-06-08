@@ -42,13 +42,14 @@ class DistributionsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(ba
     * @param accountId Account ID 
     * @param distributionCreateParameters  
     * @param xminusPhraseAppMinusOTP Two-Factor-Authentication token (optional) (optional)
-    * @return void
+    * @return Distribution
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
+    @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun distributionCreate(accountId: kotlin.String, distributionCreateParameters: DistributionCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Unit {
+    fun distributionCreate(accountId: kotlin.String, distributionCreateParameters: DistributionCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Distribution {
         val localVariableBody: kotlin.Any? = distributionCreateParameters
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf("X-PhraseApp-OTP" to xminusPhraseAppMinusOTP.toString())
@@ -58,13 +59,13 @@ class DistributionsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(ba
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<Any?>(
+        val localVarResponse = request<Distribution>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
+            ResponseType.Success -> (localVarResponse as Success<*>).data as Distribution
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

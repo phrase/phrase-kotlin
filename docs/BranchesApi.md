@@ -71,7 +71,7 @@ Configure Token:
 
 <a name="branchCreate"></a>
 # **branchCreate**
-> branchCreate(projectId, branchCreateParameters, xminusPhraseAppMinusOTP)
+> Branch branchCreate(projectId, branchCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a branch
 
@@ -88,7 +88,8 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val branchCreateParameters : BranchCreateParameters =  // BranchCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.branchCreate(projectId, branchCreateParameters, xminusPhraseAppMinusOTP)
+    val result : Branch = apiInstance.branchCreate(projectId, branchCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling BranchesApi#branchCreate")
     e.printStackTrace()
@@ -108,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Branch**](Branch.md)
 
 ### Authorization
 
@@ -123,7 +124,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="branchDelete"></a>
 # **branchDelete**

@@ -77,7 +77,7 @@ Configure Token:
 
 <a name="jobCreate"></a>
 # **jobCreate**
-> jobCreate(projectId, jobCreateParameters, xminusPhraseAppMinusOTP)
+> JobDetails jobCreate(projectId, jobCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a job
 
@@ -94,7 +94,8 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val jobCreateParameters : JobCreateParameters =  // JobCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.jobCreate(projectId, jobCreateParameters, xminusPhraseAppMinusOTP)
+    val result : JobDetails = apiInstance.jobCreate(projectId, jobCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling JobsApi#jobCreate")
     e.printStackTrace()
@@ -114,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**JobDetails**](JobDetails.md)
 
 ### Authorization
 
@@ -129,7 +130,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="jobDelete"></a>
 # **jobDelete**

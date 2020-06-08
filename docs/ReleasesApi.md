@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="releaseCreate"></a>
 # **releaseCreate**
-> releaseCreate(accountId, distributionId, releaseCreateParameters, xminusPhraseAppMinusOTP)
+> Release releaseCreate(accountId, distributionId, releaseCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a release
 
@@ -32,7 +32,8 @@ val distributionId : kotlin.String = distributionId_example // kotlin.String | D
 val releaseCreateParameters : ReleaseCreateParameters =  // ReleaseCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.releaseCreate(accountId, distributionId, releaseCreateParameters, xminusPhraseAppMinusOTP)
+    val result : Release = apiInstance.releaseCreate(accountId, distributionId, releaseCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling ReleasesApi#releaseCreate")
     e.printStackTrace()
@@ -53,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Release**](Release.md)
 
 ### Authorization
 
@@ -68,7 +69,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="releaseDelete"></a>
 # **releaseDelete**

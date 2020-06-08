@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="distributionCreate"></a>
 # **distributionCreate**
-> distributionCreate(accountId, distributionCreateParameters, xminusPhraseAppMinusOTP)
+> Distribution distributionCreate(accountId, distributionCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a distribution
 
@@ -30,7 +30,8 @@ val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
 val distributionCreateParameters : DistributionCreateParameters =  // DistributionCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.distributionCreate(accountId, distributionCreateParameters, xminusPhraseAppMinusOTP)
+    val result : Distribution = apiInstance.distributionCreate(accountId, distributionCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling DistributionsApi#distributionCreate")
     e.printStackTrace()
@@ -50,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Distribution**](Distribution.md)
 
 ### Authorization
 
@@ -65,7 +66,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="distributionDelete"></a>
 # **distributionDelete**

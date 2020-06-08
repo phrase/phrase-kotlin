@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="authorizationCreate"></a>
 # **authorizationCreate**
-> authorizationCreate(authorizationCreateParameters, xminusPhraseAppMinusOTP)
+> AuthorizationWithToken authorizationCreate(authorizationCreateParameters, xminusPhraseAppMinusOTP)
 
 Create an authorization
 
@@ -29,7 +29,8 @@ val apiInstance = AuthorizationsApi()
 val authorizationCreateParameters : AuthorizationCreateParameters =  // AuthorizationCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.authorizationCreate(authorizationCreateParameters, xminusPhraseAppMinusOTP)
+    val result : AuthorizationWithToken = apiInstance.authorizationCreate(authorizationCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling AuthorizationsApi#authorizationCreate")
     e.printStackTrace()
@@ -48,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**AuthorizationWithToken**](AuthorizationWithToken.md)
 
 ### Authorization
 
@@ -63,7 +64,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="authorizationDelete"></a>
 # **authorizationDelete**

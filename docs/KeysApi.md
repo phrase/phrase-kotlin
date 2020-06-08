@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="keyCreate"></a>
 # **keyCreate**
-> keyCreate(projectId, keyCreateParameters, xminusPhraseAppMinusOTP)
+> TranslationKeyDetails keyCreate(projectId, keyCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a key
 
@@ -34,7 +34,8 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val keyCreateParameters : KeyCreateParameters =  // KeyCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.keyCreate(projectId, keyCreateParameters, xminusPhraseAppMinusOTP)
+    val result : TranslationKeyDetails = apiInstance.keyCreate(projectId, keyCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling KeysApi#keyCreate")
     e.printStackTrace()
@@ -54,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**TranslationKeyDetails**](TranslationKeyDetails.md)
 
 ### Authorization
 
@@ -69,7 +70,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="keyDelete"></a>
 # **keyDelete**

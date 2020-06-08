@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 <a name="translationCreate"></a>
 # **translationCreate**
-> translationCreate(projectId, translationCreateParameters, xminusPhraseAppMinusOTP)
+> TranslationDetails translationCreate(projectId, translationCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a translation
 
@@ -42,7 +42,8 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val translationCreateParameters : TranslationCreateParameters =  // TranslationCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.translationCreate(projectId, translationCreateParameters, xminusPhraseAppMinusOTP)
+    val result : TranslationDetails = apiInstance.translationCreate(projectId, translationCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling TranslationsApi#translationCreate")
     e.printStackTrace()
@@ -62,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**TranslationDetails**](TranslationDetails.md)
 
 ### Authorization
 
@@ -77,7 +78,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="translationExclude"></a>
 # **translationExclude**

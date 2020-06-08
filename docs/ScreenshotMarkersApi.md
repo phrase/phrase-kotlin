@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="screenshotMarkerCreate"></a>
 # **screenshotMarkerCreate**
-> screenshotMarkerCreate(projectId, screenshotId, screenshotMarkerCreateParameters, xminusPhraseAppMinusOTP)
+> ScreenshotMarker screenshotMarkerCreate(projectId, screenshotId, screenshotMarkerCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a screenshot marker
 
@@ -31,7 +31,8 @@ val screenshotId : kotlin.String = screenshotId_example // kotlin.String | Scree
 val screenshotMarkerCreateParameters : ScreenshotMarkerCreateParameters =  // ScreenshotMarkerCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.screenshotMarkerCreate(projectId, screenshotId, screenshotMarkerCreateParameters, xminusPhraseAppMinusOTP)
+    val result : ScreenshotMarker = apiInstance.screenshotMarkerCreate(projectId, screenshotId, screenshotMarkerCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling ScreenshotMarkersApi#screenshotMarkerCreate")
     e.printStackTrace()
@@ -52,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ScreenshotMarker**](ScreenshotMarker.md)
 
 ### Authorization
 
@@ -67,7 +68,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="screenshotMarkerDelete"></a>
 # **screenshotMarkerDelete**

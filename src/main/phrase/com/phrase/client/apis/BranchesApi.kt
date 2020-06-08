@@ -84,13 +84,14 @@ class BranchesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     * @param projectId Project ID 
     * @param branchCreateParameters  
     * @param xminusPhraseAppMinusOTP Two-Factor-Authentication token (optional) (optional)
-    * @return void
+    * @return Branch
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
+    @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun branchCreate(projectId: kotlin.String, branchCreateParameters: BranchCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Unit {
+    fun branchCreate(projectId: kotlin.String, branchCreateParameters: BranchCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Branch {
         val localVariableBody: kotlin.Any? = branchCreateParameters
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf("X-PhraseApp-OTP" to xminusPhraseAppMinusOTP.toString())
@@ -100,13 +101,13 @@ class BranchesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<Any?>(
+        val localVarResponse = request<Branch>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
+            ResponseType.Success -> (localVarResponse as Success<*>).data as Branch
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

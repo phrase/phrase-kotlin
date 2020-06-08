@@ -43,13 +43,14 @@ class ReleasesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     * @param distributionId Distribution ID 
     * @param releaseCreateParameters  
     * @param xminusPhraseAppMinusOTP Two-Factor-Authentication token (optional) (optional)
-    * @return void
+    * @return Release
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
+    @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun releaseCreate(accountId: kotlin.String, distributionId: kotlin.String, releaseCreateParameters: ReleaseCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Unit {
+    fun releaseCreate(accountId: kotlin.String, distributionId: kotlin.String, releaseCreateParameters: ReleaseCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Release {
         val localVariableBody: kotlin.Any? = releaseCreateParameters
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf("X-PhraseApp-OTP" to xminusPhraseAppMinusOTP.toString())
@@ -59,13 +60,13 @@ class ReleasesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<Any?>(
+        val localVarResponse = request<Release>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
+            ResponseType.Success -> (localVarResponse as Success<*>).data as Release
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

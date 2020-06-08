@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="webhookCreate"></a>
 # **webhookCreate**
-> webhookCreate(projectId, webhookCreateParameters, xminusPhraseAppMinusOTP)
+> Webhook webhookCreate(projectId, webhookCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a webhook
 
@@ -31,7 +31,8 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val webhookCreateParameters : WebhookCreateParameters =  // WebhookCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.webhookCreate(projectId, webhookCreateParameters, xminusPhraseAppMinusOTP)
+    val result : Webhook = apiInstance.webhookCreate(projectId, webhookCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling WebhooksApi#webhookCreate")
     e.printStackTrace()
@@ -51,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Webhook**](Webhook.md)
 
 ### Authorization
 
@@ -66,7 +67,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="webhookDelete"></a>
 # **webhookDelete**

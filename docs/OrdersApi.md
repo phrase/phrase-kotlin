@@ -72,7 +72,7 @@ Configure Token:
 
 <a name="orderCreate"></a>
 # **orderCreate**
-> orderCreate(projectId, orderCreateParameters, xminusPhraseAppMinusOTP)
+> TranslationOrder orderCreate(projectId, orderCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a new order
 
@@ -89,7 +89,8 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val orderCreateParameters : OrderCreateParameters =  // OrderCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.orderCreate(projectId, orderCreateParameters, xminusPhraseAppMinusOTP)
+    val result : TranslationOrder = apiInstance.orderCreate(projectId, orderCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling OrdersApi#orderCreate")
     e.printStackTrace()
@@ -109,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**TranslationOrder**](TranslationOrder.md)
 
 ### Authorization
 
@@ -124,7 +125,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="orderDelete"></a>
 # **orderDelete**

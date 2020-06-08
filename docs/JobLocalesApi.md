@@ -319,7 +319,7 @@ Configure Token:
 
 <a name="jobLocalesCreate"></a>
 # **jobLocalesCreate**
-> jobLocalesCreate(projectId, jobId, jobLocalesCreateParameters, xminusPhraseAppMinusOTP)
+> JobLocale jobLocalesCreate(projectId, jobId, jobLocalesCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a job locale
 
@@ -337,7 +337,8 @@ val jobId : kotlin.String = jobId_example // kotlin.String | Job ID
 val jobLocalesCreateParameters : JobLocalesCreateParameters =  // JobLocalesCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.jobLocalesCreate(projectId, jobId, jobLocalesCreateParameters, xminusPhraseAppMinusOTP)
+    val result : JobLocale = apiInstance.jobLocalesCreate(projectId, jobId, jobLocalesCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling JobLocalesApi#jobLocalesCreate")
     e.printStackTrace()
@@ -358,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**JobLocale**](JobLocale.md)
 
 ### Authorization
 
@@ -373,7 +374,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="jobLocalesList"></a>
 # **jobLocalesList**

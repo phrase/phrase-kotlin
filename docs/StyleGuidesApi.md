@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="styleguideCreate"></a>
 # **styleguideCreate**
-> styleguideCreate(projectId, styleguideCreateParameters, xminusPhraseAppMinusOTP)
+> StyleguideDetails styleguideCreate(projectId, styleguideCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a style guide
 
@@ -30,7 +30,8 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val styleguideCreateParameters : StyleguideCreateParameters =  // StyleguideCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.styleguideCreate(projectId, styleguideCreateParameters, xminusPhraseAppMinusOTP)
+    val result : StyleguideDetails = apiInstance.styleguideCreate(projectId, styleguideCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling StyleGuidesApi#styleguideCreate")
     e.printStackTrace()
@@ -50,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**StyleguideDetails**](StyleguideDetails.md)
 
 ### Authorization
 
@@ -65,7 +66,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="styleguideDelete"></a>
 # **styleguideDelete**

@@ -51,13 +51,14 @@ class UploadsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     * @param fileEncoding Enforces a specific encoding on the file contents. Valid options are \\\&quot;UTF-8\\\&quot;, \\\&quot;UTF-16\\\&quot; and \\\&quot;ISO-8859-1\\\&quot;. (optional)
     * @param autotranslate If set, translations for the uploaded language will be fetched automatically. (optional)
     * @param markReviewed Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project. (optional)
-    * @return void
+    * @return Upload
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
+    @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uploadCreate(projectId: kotlin.String, xminusPhraseAppMinusOTP: kotlin.String?, branch: kotlin.String?, file: java.io.File?, fileFormat: kotlin.String?, localeId: kotlin.String?, tags: kotlin.String?, updateTranslations: kotlin.Boolean?, updateDescriptions: kotlin.Boolean?, convertEmoji: kotlin.Boolean?, skipUploadTags: kotlin.Boolean?, skipUnverification: kotlin.Boolean?, fileEncoding: kotlin.String?, autotranslate: kotlin.Boolean?, markReviewed: kotlin.Boolean?) : Unit {
+    fun uploadCreate(projectId: kotlin.String, xminusPhraseAppMinusOTP: kotlin.String?, branch: kotlin.String?, file: java.io.File?, fileFormat: kotlin.String?, localeId: kotlin.String?, tags: kotlin.String?, updateTranslations: kotlin.Boolean?, updateDescriptions: kotlin.Boolean?, convertEmoji: kotlin.Boolean?, skipUploadTags: kotlin.Boolean?, skipUnverification: kotlin.Boolean?, fileEncoding: kotlin.String?, autotranslate: kotlin.Boolean?, markReviewed: kotlin.Boolean?) : Upload {
         val localVariableBody: kotlin.Any? = mapOf("branch" to branch, "file" to file, "file_format" to fileFormat, "locale_id" to localeId, "tags" to tags, "update_translations" to updateTranslations, "update_descriptions" to updateDescriptions, "convert_emoji" to convertEmoji, "skip_upload_tags" to skipUploadTags, "skip_unverification" to skipUnverification, "file_encoding" to fileEncoding, "autotranslate" to autotranslate, "mark_reviewed" to markReviewed)
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf("Content-Type" to "multipart/form-data", "X-PhraseApp-OTP" to xminusPhraseAppMinusOTP.toString())
@@ -67,13 +68,13 @@ class UploadsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<Any?>(
+        val localVarResponse = request<Upload>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
+            ResponseType.Success -> (localVarResponse as Success<*>).data as Upload
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

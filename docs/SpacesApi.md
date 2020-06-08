@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="spaceCreate"></a>
 # **spaceCreate**
-> spaceCreate(accountId, spaceCreateParameters, xminusPhraseAppMinusOTP)
+> Space spaceCreate(accountId, spaceCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a Space
 
@@ -33,7 +33,8 @@ val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
 val spaceCreateParameters : SpaceCreateParameters =  // SpaceCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.spaceCreate(accountId, spaceCreateParameters, xminusPhraseAppMinusOTP)
+    val result : Space = apiInstance.spaceCreate(accountId, spaceCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling SpacesApi#spaceCreate")
     e.printStackTrace()
@@ -53,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Space**](Space.md)
 
 ### Authorization
 
@@ -68,7 +69,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="spaceDelete"></a>
 # **spaceDelete**

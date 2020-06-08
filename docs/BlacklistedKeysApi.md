@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="blacklistedKeyCreate"></a>
 # **blacklistedKeyCreate**
-> blacklistedKeyCreate(projectId, blacklistedKeyCreateParameters, xminusPhraseAppMinusOTP)
+> BlacklistedKey blacklistedKeyCreate(projectId, blacklistedKeyCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a blacklisted key
 
@@ -30,7 +30,8 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val blacklistedKeyCreateParameters : BlacklistedKeyCreateParameters =  // BlacklistedKeyCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.blacklistedKeyCreate(projectId, blacklistedKeyCreateParameters, xminusPhraseAppMinusOTP)
+    val result : BlacklistedKey = apiInstance.blacklistedKeyCreate(projectId, blacklistedKeyCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling BlacklistedKeysApi#blacklistedKeyCreate")
     e.printStackTrace()
@@ -50,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**BlacklistedKey**](BlacklistedKey.md)
 
 ### Authorization
 
@@ -65,7 +66,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="blacklistedKeyDelete"></a>
 # **blacklistedKeyDelete**

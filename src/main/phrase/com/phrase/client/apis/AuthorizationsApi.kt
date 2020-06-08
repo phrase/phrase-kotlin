@@ -14,6 +14,7 @@ package com.phrase.client.apis
 import com.phrase.client.models.Authorization
 import com.phrase.client.models.AuthorizationCreateParameters
 import com.phrase.client.models.AuthorizationUpdateParameters
+import com.phrase.client.models.AuthorizationWithToken
 
 import com.phrase.client.infrastructure.ApiClient
 import com.phrase.client.infrastructure.ClientException
@@ -40,13 +41,14 @@ class AuthorizationsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     * Create a new authorization.
     * @param authorizationCreateParameters  
     * @param xminusPhraseAppMinusOTP Two-Factor-Authentication token (optional) (optional)
-    * @return void
+    * @return AuthorizationWithToken
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
+    @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun authorizationCreate(authorizationCreateParameters: AuthorizationCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Unit {
+    fun authorizationCreate(authorizationCreateParameters: AuthorizationCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : AuthorizationWithToken {
         val localVariableBody: kotlin.Any? = authorizationCreateParameters
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf("X-PhraseApp-OTP" to xminusPhraseAppMinusOTP.toString())
@@ -56,13 +58,13 @@ class AuthorizationsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<Any?>(
+        val localVarResponse = request<AuthorizationWithToken>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
+            ResponseType.Success -> (localVarResponse as Success<*>).data as AuthorizationWithToken
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

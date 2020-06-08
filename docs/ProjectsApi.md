@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="projectCreate"></a>
 # **projectCreate**
-> projectCreate(projectCreateParameters, xminusPhraseAppMinusOTP)
+> ProjectDetails projectCreate(projectCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a project
 
@@ -29,7 +29,8 @@ val apiInstance = ProjectsApi()
 val projectCreateParameters : ProjectCreateParameters =  // ProjectCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.projectCreate(projectCreateParameters, xminusPhraseAppMinusOTP)
+    val result : ProjectDetails = apiInstance.projectCreate(projectCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling ProjectsApi#projectCreate")
     e.printStackTrace()
@@ -48,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ProjectDetails**](ProjectDetails.md)
 
 ### Authorization
 
@@ -63,7 +64,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="projectDelete"></a>
 # **projectDelete**

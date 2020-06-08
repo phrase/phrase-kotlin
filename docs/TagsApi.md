@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="tagCreate"></a>
 # **tagCreate**
-> tagCreate(projectId, tagCreateParameters, xminusPhraseAppMinusOTP)
+> TagWithStats tagCreate(projectId, tagCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a tag
 
@@ -29,7 +29,8 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val tagCreateParameters : TagCreateParameters =  // TagCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.tagCreate(projectId, tagCreateParameters, xminusPhraseAppMinusOTP)
+    val result : TagWithStats = apiInstance.tagCreate(projectId, tagCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling TagsApi#tagCreate")
     e.printStackTrace()
@@ -49,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**TagWithStats**](TagWithStats.md)
 
 ### Authorization
 
@@ -64,7 +65,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="tagDelete"></a>
 # **tagDelete**

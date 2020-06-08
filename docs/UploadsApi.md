@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="uploadCreate"></a>
 # **uploadCreate**
-> uploadCreate(projectId, xminusPhraseAppMinusOTP, branch, file, fileFormat, localeId, tags, updateTranslations, updateDescriptions, convertEmoji, skipUploadTags, skipUnverification, fileEncoding, autotranslate, markReviewed)
+> Upload uploadCreate(projectId, xminusPhraseAppMinusOTP, branch, file, fileFormat, localeId, tags, updateTranslations, updateDescriptions, convertEmoji, skipUploadTags, skipUnverification, fileEncoding, autotranslate, markReviewed)
 
 Upload a new file
 
@@ -40,7 +40,8 @@ val fileEncoding : kotlin.String = fileEncoding_example // kotlin.String | Enfor
 val autotranslate : kotlin.Boolean = true // kotlin.Boolean | If set, translations for the uploaded language will be fetched automatically.
 val markReviewed : kotlin.Boolean = true // kotlin.Boolean | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project.
 try {
-    apiInstance.uploadCreate(projectId, xminusPhraseAppMinusOTP, branch, file, fileFormat, localeId, tags, updateTranslations, updateDescriptions, convertEmoji, skipUploadTags, skipUnverification, fileEncoding, autotranslate, markReviewed)
+    val result : Upload = apiInstance.uploadCreate(projectId, xminusPhraseAppMinusOTP, branch, file, fileFormat, localeId, tags, updateTranslations, updateDescriptions, convertEmoji, skipUploadTags, skipUnverification, fileEncoding, autotranslate, markReviewed)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling UploadsApi#uploadCreate")
     e.printStackTrace()
@@ -72,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Upload**](Upload.md)
 
 ### Authorization
 
@@ -87,7 +88,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="uploadShow"></a>
 # **uploadShow**

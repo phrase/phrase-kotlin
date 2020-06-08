@@ -72,7 +72,7 @@ Configure Token:
 
 <a name="glossaryCreate"></a>
 # **glossaryCreate**
-> glossaryCreate(accountId, glossaryCreateParameters, xminusPhraseAppMinusOTP)
+> Glossary glossaryCreate(accountId, glossaryCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a glossary
 
@@ -89,7 +89,8 @@ val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
 val glossaryCreateParameters : GlossaryCreateParameters =  // GlossaryCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.glossaryCreate(accountId, glossaryCreateParameters, xminusPhraseAppMinusOTP)
+    val result : Glossary = apiInstance.glossaryCreate(accountId, glossaryCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling GlossaryApi#glossaryCreate")
     e.printStackTrace()
@@ -109,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Glossary**](Glossary.md)
 
 ### Authorization
 
@@ -124,7 +125,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="glossaryDelete"></a>
 # **glossaryDelete**

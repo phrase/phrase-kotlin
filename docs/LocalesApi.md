@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="localeCreate"></a>
 # **localeCreate**
-> localeCreate(projectId, localeCreateParameters, xminusPhraseAppMinusOTP)
+> LocaleDetails localeCreate(projectId, localeCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a locale
 
@@ -31,7 +31,8 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val localeCreateParameters : LocaleCreateParameters =  // LocaleCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.localeCreate(projectId, localeCreateParameters, xminusPhraseAppMinusOTP)
+    val result : LocaleDetails = apiInstance.localeCreate(projectId, localeCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling LocalesApi#localeCreate")
     e.printStackTrace()
@@ -51,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**LocaleDetails**](LocaleDetails.md)
 
 ### Authorization
 
@@ -66,7 +67,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="localeDelete"></a>
 # **localeDelete**

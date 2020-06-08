@@ -41,13 +41,14 @@ class WebhooksApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     * @param projectId Project ID 
     * @param webhookCreateParameters  
     * @param xminusPhraseAppMinusOTP Two-Factor-Authentication token (optional) (optional)
-    * @return void
+    * @return Webhook
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
     * @throws ServerException If the API returns a server error response
     */
+    @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun webhookCreate(projectId: kotlin.String, webhookCreateParameters: WebhookCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Unit {
+    fun webhookCreate(projectId: kotlin.String, webhookCreateParameters: WebhookCreateParameters, xminusPhraseAppMinusOTP: kotlin.String?) : Webhook {
         val localVariableBody: kotlin.Any? = webhookCreateParameters
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf("X-PhraseApp-OTP" to xminusPhraseAppMinusOTP.toString())
@@ -57,13 +58,13 @@ class WebhooksApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
             query = localVariableQuery,
             headers = localVariableHeaders
         )
-        val localVarResponse = request<Any?>(
+        val localVarResponse = request<Webhook>(
             localVariableConfig,
             localVariableBody
         )
 
         return when (localVarResponse.responseType) {
-            ResponseType.Success -> Unit
+            ResponseType.Success -> (localVarResponse as Success<*>).data as Webhook
             ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
             ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
             ResponseType.ClientError -> {

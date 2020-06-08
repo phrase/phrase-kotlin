@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="commentCreate"></a>
 # **commentCreate**
-> commentCreate(projectId, keyId, commentCreateParameters, xminusPhraseAppMinusOTP)
+> Comment commentCreate(projectId, keyId, commentCreateParameters, xminusPhraseAppMinusOTP)
 
 Create a comment
 
@@ -34,7 +34,8 @@ val keyId : kotlin.String = keyId_example // kotlin.String | Translation Key ID
 val commentCreateParameters : CommentCreateParameters =  // CommentCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
-    apiInstance.commentCreate(projectId, keyId, commentCreateParameters, xminusPhraseAppMinusOTP)
+    val result : Comment = apiInstance.commentCreate(projectId, keyId, commentCreateParameters, xminusPhraseAppMinusOTP)
+    println(result)
 } catch (e: ClientException) {
     println("4xx response calling CommentsApi#commentCreate")
     e.printStackTrace()
@@ -55,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**Comment**](Comment.md)
 
 ### Authorization
 
@@ -70,7 +71,7 @@ Configure Token:
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 <a name="commentDelete"></a>
 # **commentDelete**
