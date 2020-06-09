@@ -1,14 +1,14 @@
-# GlossaryApi
+# GlossariesApi
 
 All URIs are relative to *https://api.phrase.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**glossariesList**](GlossaryApi.md#glossariesList) | **GET** /accounts/{account_id}/glossaries | List glossaries
-[**glossaryCreate**](GlossaryApi.md#glossaryCreate) | **POST** /accounts/{account_id}/glossaries | Create a glossary
-[**glossaryDelete**](GlossaryApi.md#glossaryDelete) | **DELETE** /accounts/{account_id}/glossaries/{id} | Delete a glossary
-[**glossaryShow**](GlossaryApi.md#glossaryShow) | **GET** /accounts/{account_id}/glossaries/{id} | Get a single glossary
-[**glossaryUpdate**](GlossaryApi.md#glossaryUpdate) | **PATCH** /accounts/{account_id}/glossaries/{id} | Update a glossary
+[**glossariesList**](GlossariesApi.md#glossariesList) | **GET** /accounts/{account_id}/glossaries | List glossaries
+[**glossaryCreate**](GlossariesApi.md#glossaryCreate) | **POST** /accounts/{account_id}/glossaries | Create a glossary
+[**glossaryDelete**](GlossariesApi.md#glossaryDelete) | **DELETE** /accounts/{account_id}/glossaries/{id} | Delete a glossary
+[**glossaryShow**](GlossariesApi.md#glossaryShow) | **GET** /accounts/{account_id}/glossaries/{id} | Get a single glossary
+[**glossaryUpdate**](GlossariesApi.md#glossaryUpdate) | **PATCH** /accounts/{account_id}/glossaries/{id} | Update a glossary
 
 
 <a name="glossariesList"></a>
@@ -25,7 +25,7 @@ List all glossaries the current user has access to.
 //import com.phrase.client.infrastructure.*
 //import com.phrase.client.models.*
 
-val apiInstance = GlossaryApi()
+val apiInstance = GlossariesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 val page : kotlin.Int = 1 // kotlin.Int | Page number
@@ -34,10 +34,10 @@ try {
     val result : kotlin.Array<Glossary> = apiInstance.glossariesList(accountId, xminusPhraseAppMinusOTP, page, perPage)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling GlossaryApi#glossariesList")
+    println("4xx response calling GlossariesApi#glossariesList")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling GlossaryApi#glossariesList")
+    println("5xx response calling GlossariesApi#glossariesList")
     e.printStackTrace()
 }
 ```
@@ -84,7 +84,7 @@ Create a new glossary.
 //import com.phrase.client.infrastructure.*
 //import com.phrase.client.models.*
 
-val apiInstance = GlossaryApi()
+val apiInstance = GlossariesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
 val glossaryCreateParameters : GlossaryCreateParameters =  // GlossaryCreateParameters | 
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
@@ -92,10 +92,10 @@ try {
     val result : Glossary = apiInstance.glossaryCreate(accountId, glossaryCreateParameters, xminusPhraseAppMinusOTP)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling GlossaryApi#glossaryCreate")
+    println("4xx response calling GlossariesApi#glossaryCreate")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling GlossaryApi#glossaryCreate")
+    println("5xx response calling GlossariesApi#glossaryCreate")
     e.printStackTrace()
 }
 ```
@@ -141,17 +141,17 @@ Delete an existing glossary.
 //import com.phrase.client.infrastructure.*
 //import com.phrase.client.models.*
 
-val apiInstance = GlossaryApi()
+val apiInstance = GlossariesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
 val id : kotlin.String = id_example // kotlin.String | ID
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 try {
     apiInstance.glossaryDelete(accountId, id, xminusPhraseAppMinusOTP)
 } catch (e: ClientException) {
-    println("4xx response calling GlossaryApi#glossaryDelete")
+    println("4xx response calling GlossariesApi#glossaryDelete")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling GlossaryApi#glossaryDelete")
+    println("5xx response calling GlossariesApi#glossaryDelete")
     e.printStackTrace()
 }
 ```
@@ -197,7 +197,7 @@ Get details on a single glossary.
 //import com.phrase.client.infrastructure.*
 //import com.phrase.client.models.*
 
-val apiInstance = GlossaryApi()
+val apiInstance = GlossariesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
 val id : kotlin.String = id_example // kotlin.String | ID
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
@@ -205,10 +205,10 @@ try {
     val result : Glossary = apiInstance.glossaryShow(accountId, id, xminusPhraseAppMinusOTP)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling GlossaryApi#glossaryShow")
+    println("4xx response calling GlossariesApi#glossaryShow")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling GlossaryApi#glossaryShow")
+    println("5xx response calling GlossariesApi#glossaryShow")
     e.printStackTrace()
 }
 ```
@@ -254,7 +254,7 @@ Update an existing glossary.
 //import com.phrase.client.infrastructure.*
 //import com.phrase.client.models.*
 
-val apiInstance = GlossaryApi()
+val apiInstance = GlossariesApi()
 val accountId : kotlin.String = accountId_example // kotlin.String | Account ID
 val id : kotlin.String = id_example // kotlin.String | ID
 val glossaryUpdateParameters : GlossaryUpdateParameters =  // GlossaryUpdateParameters | 
@@ -263,10 +263,10 @@ try {
     val result : Glossary = apiInstance.glossaryUpdate(accountId, id, glossaryUpdateParameters, xminusPhraseAppMinusOTP)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling GlossaryApi#glossaryUpdate")
+    println("4xx response calling GlossariesApi#glossaryUpdate")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling GlossaryApi#glossaryUpdate")
+    println("5xx response calling GlossariesApi#glossaryUpdate")
     e.printStackTrace()
 }
 ```

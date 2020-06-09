@@ -27,7 +27,7 @@ import com.phrase.client.infrastructure.ResponseType
 import com.phrase.client.infrastructure.Success
 import com.phrase.client.infrastructure.toMultiValue
 
-class GlossaryApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
+class GlossariesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath) {
     companion object {
         @JvmStatic
         val defaultBasePath: String by lazy {
