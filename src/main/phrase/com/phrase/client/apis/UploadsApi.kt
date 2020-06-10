@@ -49,6 +49,8 @@ class UploadsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     * @param skipUploadTags Indicates whether the upload should not create upload tags. (optional)
     * @param skipUnverification Indicates whether the upload should unverify updated translations. (optional)
     * @param fileEncoding Enforces a specific encoding on the file contents. Valid options are \\\&quot;UTF-8\\\&quot;, \\\&quot;UTF-16\\\&quot; and \\\&quot;ISO-8859-1\\\&quot;. (optional)
+    * @param localeMapping Optional, format specific mapping between locale names and the columns the translations to those locales are contained in. (optional)
+    * @param formatOptions Additional options available for specific formats. See our format guide for complete list. (optional)
     * @param autotranslate If set, translations for the uploaded language will be fetched automatically. (optional)
     * @param markReviewed Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project. (optional)
     * @return Upload
@@ -58,8 +60,8 @@ class UploadsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uploadCreate(projectId: kotlin.String, xminusPhraseAppMinusOTP: kotlin.String?, branch: kotlin.String?, file: java.io.File?, fileFormat: kotlin.String?, localeId: kotlin.String?, tags: kotlin.String?, updateTranslations: kotlin.Boolean?, updateDescriptions: kotlin.Boolean?, convertEmoji: kotlin.Boolean?, skipUploadTags: kotlin.Boolean?, skipUnverification: kotlin.Boolean?, fileEncoding: kotlin.String?, autotranslate: kotlin.Boolean?, markReviewed: kotlin.Boolean?) : Upload {
-        val localVariableBody: kotlin.Any? = mapOf("branch" to branch, "file" to file, "file_format" to fileFormat, "locale_id" to localeId, "tags" to tags, "update_translations" to updateTranslations, "update_descriptions" to updateDescriptions, "convert_emoji" to convertEmoji, "skip_upload_tags" to skipUploadTags, "skip_unverification" to skipUnverification, "file_encoding" to fileEncoding, "autotranslate" to autotranslate, "mark_reviewed" to markReviewed)
+    fun uploadCreate(projectId: kotlin.String, xminusPhraseAppMinusOTP: kotlin.String?, branch: kotlin.String?, file: java.io.File?, fileFormat: kotlin.String?, localeId: kotlin.String?, tags: kotlin.String?, updateTranslations: kotlin.Boolean?, updateDescriptions: kotlin.Boolean?, convertEmoji: kotlin.Boolean?, skipUploadTags: kotlin.Boolean?, skipUnverification: kotlin.Boolean?, fileEncoding: kotlin.String?, localeMapping: kotlin.Any?, formatOptions: kotlin.Any?, autotranslate: kotlin.Boolean?, markReviewed: kotlin.Boolean?) : Upload {
+        val localVariableBody: kotlin.Any? = mapOf("branch" to branch, "file" to file, "file_format" to fileFormat, "locale_id" to localeId, "tags" to tags, "update_translations" to updateTranslations, "update_descriptions" to updateDescriptions, "convert_emoji" to convertEmoji, "skip_upload_tags" to skipUploadTags, "skip_unverification" to skipUnverification, "file_encoding" to fileEncoding, "locale_mapping" to localeMapping, "format_options" to formatOptions, "autotranslate" to autotranslate, "mark_reviewed" to markReviewed)
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf("Content-Type" to "multipart/form-data", "X-PhraseApp-OTP" to xminusPhraseAppMinusOTP.toString())
         val localVariableConfig = RequestConfig(
