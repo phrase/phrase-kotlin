@@ -40,7 +40,7 @@ class UploadsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     * @param xminusPhraseAppMinusOTP Two-Factor-Authentication token (optional) (optional)
     * @param branch specify the branch to use (optional)
     * @param file File to be imported (optional)
-    * @param fileFormat File format. Auto-detected when possible and not specified. (optional)
+    * @param fileFormat File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats. (optional)
     * @param localeId Locale of the file&#39;s content. Can be the name or public id of the locale. Preferred is the public id. (optional)
     * @param tags List of tags separated by comma to be associated with the new keys contained in the upload. (optional)
     * @param updateTranslations Indicates whether existing translations should be updated with the file content. (optional)

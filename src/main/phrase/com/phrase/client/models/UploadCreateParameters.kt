@@ -17,7 +17,7 @@ import com.squareup.moshi.Json
  * 
  * @param branch specify the branch to use
  * @param file File to be imported
- * @param fileFormat File format. Auto-detected when possible and not specified.
+ * @param fileFormat File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats.
  * @param localeId Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id.
  * @param tags List of tags separated by comma to be associated with the new keys contained in the upload.
  * @param updateTranslations Indicates whether existing translations should be updated with the file content.
@@ -39,7 +39,7 @@ data class UploadCreateParameters (
     /* File to be imported */
     @Json(name = "file")
     val file: java.io.File? = null,
-    /* File format. Auto-detected when possible and not specified. */
+    /* File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats. */
     @Json(name = "file_format")
     val fileFormat: kotlin.String? = null,
     /* Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id. */

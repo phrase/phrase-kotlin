@@ -134,7 +134,7 @@ class LocalesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     * @param id ID 
     * @param xminusPhraseAppMinusOTP Two-Factor-Authentication token (optional) (optional)
     * @param branch specify the branch to use (optional)
-    * @param fileFormat File format name. See the format guide for all supported file formats. (optional)
+    * @param fileFormat File format name. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats. (optional)
     * @param tags Limit results to keys tagged with a list of comma separated tag names. (optional)
     * @param tag Limit download to tagged keys. This parameter is deprecated. Please use the \&quot;tags\&quot; parameter instead (optional)
     * @param includeEmptyTranslations Indicates whether keys without translations should be included in the output as well. (optional)

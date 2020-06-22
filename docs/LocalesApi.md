@@ -146,7 +146,7 @@ val projectId : kotlin.String = projectId_example // kotlin.String | Project ID
 val id : kotlin.String = id_example // kotlin.String | ID
 val xminusPhraseAppMinusOTP : kotlin.String = xminusPhraseAppMinusOTP_example // kotlin.String | Two-Factor-Authentication token (optional)
 val branch : kotlin.String = my-feature-branch // kotlin.String | specify the branch to use
-val fileFormat : kotlin.String = yml // kotlin.String | File format name. See the format guide for all supported file formats.
+val fileFormat : kotlin.String = yml // kotlin.String | File format name. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats.
 val tags : kotlin.String = feature1,feature2 // kotlin.String | Limit results to keys tagged with a list of comma separated tag names.
 val tag : kotlin.String = feature // kotlin.String | Limit download to tagged keys. This parameter is deprecated. Please use the \"tags\" parameter instead
 val includeEmptyTranslations : kotlin.Boolean = true // kotlin.Boolean | Indicates whether keys without translations should be included in the output as well.
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
  **id** | **kotlin.String**| ID |
  **xminusPhraseAppMinusOTP** | **kotlin.String**| Two-Factor-Authentication token (optional) | [optional]
  **branch** | **kotlin.String**| specify the branch to use | [optional]
- **fileFormat** | **kotlin.String**| File format name. See the format guide for all supported file formats. | [optional]
+ **fileFormat** | **kotlin.String**| File format name. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats. | [optional]
  **tags** | **kotlin.String**| Limit results to keys tagged with a list of comma separated tag names. | [optional]
  **tag** | **kotlin.String**| Limit download to tagged keys. This parameter is deprecated. Please use the \&quot;tags\&quot; parameter instead | [optional]
  **includeEmptyTranslations** | **kotlin.Boolean**| Indicates whether keys without translations should be included in the output as well. | [optional]
