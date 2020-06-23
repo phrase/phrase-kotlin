@@ -17,7 +17,7 @@ import com.squareup.moshi.Json
  * 
  * @param branch specify the branch to use
  * @param file File to be imported
- * @param fileFormat File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats.
+ * @param fileFormat File format. Auto-detected when possible and not specified.
  * @param localeId Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id.
  * @param tags List of tags separated by comma to be associated with the new keys contained in the upload.
  * @param updateTranslations Indicates whether existing translations should be updated with the file content.
@@ -39,7 +39,7 @@ data class UploadCreateParameters (
     /* File to be imported */
     @Json(name = "file")
     val file: java.io.File? = null,
-    /* File format. Auto-detected when possible and not specified. See the [format guide](https://help.phrase.com/help/supported-platforms-and-formats) for all supported file formats. */
+    /* File format. Auto-detected when possible and not specified. */
     @Json(name = "file_format")
     val fileFormat: kotlin.String? = null,
     /* Locale of the file's content. Can be the name or public id of the locale. Preferred is the public id. */
@@ -68,10 +68,10 @@ data class UploadCreateParameters (
     val fileEncoding: kotlin.String? = null,
     /* Optional, format specific mapping between locale names and the columns the translations to those locales are contained in. */
     @Json(name = "locale_mapping")
-    val localeMapping: kotlin.Any? = null,
+    val localeMapping: kotlin.collections.Map<kotlin.String, kotlin.String>? = null,
     /* Additional options available for specific formats. See our format guide for complete list. */
     @Json(name = "format_options")
-    val formatOptions: kotlin.Any? = null,
+    val formatOptions: kotlin.collections.Map<kotlin.String, kotlin.String>? = null,
     /* If set, translations for the uploaded language will be fetched automatically. */
     @Json(name = "autotranslate")
     val autotranslate: kotlin.Boolean? = null,
