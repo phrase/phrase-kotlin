@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="uploadCreate"></a>
 # **uploadCreate**
-> Upload uploadCreate(projectId, xminusPhraseAppMinusOTP, branch, file, fileFormat, localeId, tags, updateTranslations, updateDescriptions, convertEmoji, skipUploadTags, skipUnverification, fileEncoding, autotranslate, markReviewed)
+> Upload uploadCreate(projectId, xminusPhraseAppMinusOTP, branch, file, fileFormat, localeId, tags, updateTranslations, updateDescriptions, convertEmoji, skipUploadTags, skipUnverification, fileEncoding, localeMapping, formatOptions, autotranslate, markReviewed)
 
 Upload a new file
 
@@ -37,10 +37,12 @@ val convertEmoji : kotlin.Boolean = true // kotlin.Boolean | This option is obso
 val skipUploadTags : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the upload should not create upload tags.
 val skipUnverification : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the upload should unverify updated translations.
 val fileEncoding : kotlin.String = fileEncoding_example // kotlin.String | Enforces a specific encoding on the file contents. Valid options are \\\"UTF-8\\\", \\\"UTF-16\\\" and \\\"ISO-8859-1\\\".
+val localeMapping : kotlin.Any = Object // kotlin.Any | Optional, format specific mapping between locale names and the columns the translations to those locales are contained in.
+val formatOptions : kotlin.Any = Object // kotlin.Any | Additional options available for specific formats. See our format guide for complete list.
 val autotranslate : kotlin.Boolean = true // kotlin.Boolean | If set, translations for the uploaded language will be fetched automatically.
 val markReviewed : kotlin.Boolean = true // kotlin.Boolean | Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project.
 try {
-    val result : Upload = apiInstance.uploadCreate(projectId, xminusPhraseAppMinusOTP, branch, file, fileFormat, localeId, tags, updateTranslations, updateDescriptions, convertEmoji, skipUploadTags, skipUnverification, fileEncoding, autotranslate, markReviewed)
+    val result : Upload = apiInstance.uploadCreate(projectId, xminusPhraseAppMinusOTP, branch, file, fileFormat, localeId, tags, updateTranslations, updateDescriptions, convertEmoji, skipUploadTags, skipUnverification, fileEncoding, localeMapping, formatOptions, autotranslate, markReviewed)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling UploadsApi#uploadCreate")
@@ -68,6 +70,8 @@ Name | Type | Description  | Notes
  **skipUploadTags** | **kotlin.Boolean**| Indicates whether the upload should not create upload tags. | [optional]
  **skipUnverification** | **kotlin.Boolean**| Indicates whether the upload should unverify updated translations. | [optional]
  **fileEncoding** | **kotlin.String**| Enforces a specific encoding on the file contents. Valid options are \\\&quot;UTF-8\\\&quot;, \\\&quot;UTF-16\\\&quot; and \\\&quot;ISO-8859-1\\\&quot;. | [optional]
+ **localeMapping** | [**kotlin.Any**](kotlin.Any.md)| Optional, format specific mapping between locale names and the columns the translations to those locales are contained in. | [optional]
+ **formatOptions** | [**kotlin.Any**](kotlin.Any.md)| Additional options available for specific formats. See our format guide for complete list. | [optional]
  **autotranslate** | **kotlin.Boolean**| If set, translations for the uploaded language will be fetched automatically. | [optional]
  **markReviewed** | **kotlin.Boolean**| Indicated whether the imported translations should be marked as reviewed. This setting is available if the review workflow (currently beta) is enabled for the project. | [optional]
 
