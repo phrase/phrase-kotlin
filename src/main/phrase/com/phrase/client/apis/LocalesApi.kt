@@ -153,7 +153,7 @@ class LocalesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     * @throws ServerException If the API returns a server error response
     */
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun localeDownload(projectId: kotlin.String, id: kotlin.String, xminusPhraseAppMinusOTP: kotlin.String?, branch: kotlin.String?, fileFormat: kotlin.String?, tags: kotlin.String?, tag: kotlin.String?, includeEmptyTranslations: kotlin.Boolean?, includeTranslatedKeys: kotlin.Boolean?, keepNotranslateTags: kotlin.Boolean?, convertEmoji: kotlin.Boolean?, formatOptions: kotlin.collections.Map<kotlin.String, kotlin.String>?, encoding: kotlin.String?, skipUnverifiedTranslations: kotlin.Boolean?, includeUnverifiedTranslations: kotlin.Boolean?, useLastReviewedVersion: kotlin.Boolean?, fallbackLocaleId: kotlin.String?) : Unit {
+    fun localeDownload(projectId: kotlin.String, id: kotlin.String, xminusPhraseAppMinusOTP: kotlin.String?, branch: kotlin.String?, fileFormat: kotlin.String?, tags: kotlin.String?, tag: kotlin.String?, includeEmptyTranslations: kotlin.Boolean?, includeTranslatedKeys: kotlin.Boolean?, keepNotranslateTags: kotlin.Boolean?, convertEmoji: kotlin.Boolean?, formatOptions: kotlin.Any?, encoding: kotlin.String?, skipUnverifiedTranslations: kotlin.Boolean?, includeUnverifiedTranslations: kotlin.Boolean?, useLastReviewedVersion: kotlin.Boolean?, fallbackLocaleId: kotlin.String?) : Unit {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
             .apply {
@@ -182,7 +182,7 @@ class LocalesApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
                     put("convert_emoji", listOf(convertEmoji.toString()))
                 }
                 if (formatOptions != null) {
-                    put("format_options", toMultiValue(formatOptions.toList(), ""))
+                    put("format_options", listOf(formatOptions.toString()))
                 }
                 if (encoding != null) {
                     put("encoding", listOf(encoding.toString()))
