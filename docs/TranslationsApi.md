@@ -516,7 +516,7 @@ val perPage : kotlin.Int = 10 // kotlin.Int | allows you to specify a page size 
 val branch : kotlin.String = my-feature-branch // kotlin.String | specify the branch to use
 val sort : kotlin.String = updated_at // kotlin.String | Sort criteria. Can be one of: key_name, created_at, updated_at.
 val order : kotlin.String = desc // kotlin.String | Order direction. Can be one of: asc, desc.
-val q : kotlin.String = PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center // kotlin.String | q_description_placeholder
+val q : kotlin.String = PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center // kotlin.String | Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
 try {
     val result : kotlin.Array<Translation> = apiInstance.translationsByKey(projectId, keyId, xminusPhraseAppMinusOTP, page, perPage, branch, sort, order, q)
     println(result)
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
  **branch** | **kotlin.String**| specify the branch to use | [optional]
  **sort** | **kotlin.String**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional]
  **order** | **kotlin.String**| Order direction. Can be one of: asc, desc. | [optional]
- **q** | **kotlin.String**| q_description_placeholder | [optional]
+ **q** | **kotlin.String**| Specify a query to find translations by content (including wildcards).&lt;br&gt;&lt;br&gt; The following qualifiers are supported in the query:&lt;br&gt; &lt;ul&gt;   &lt;li&gt;&lt;code&gt;id:translation_id,...&lt;/code&gt; for queries on a comma-separated list of ids&lt;/li&gt;   &lt;li&gt;&lt;code&gt;unverified:{true|false}&lt;/code&gt; for verification status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;tags:XYZ&lt;/code&gt; for tags on the translation&lt;/li&gt;   &lt;li&gt;&lt;code&gt;excluded:{true|false}&lt;/code&gt; for exclusion status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;updated_at:{&gt;&#x3D;|&lt;&#x3D;}2013-02-21T00:00:00Z&lt;/code&gt; for date range queries&lt;/li&gt; &lt;/ul&gt; Find more examples &lt;a href&#x3D;\&quot;#overview--usage-examples\&quot;&gt;here&lt;/a&gt;.  | [optional]
 
 ### Return type
 
@@ -585,7 +585,7 @@ val perPage : kotlin.Int = 10 // kotlin.Int | allows you to specify a page size 
 val branch : kotlin.String = my-feature-branch // kotlin.String | specify the branch to use
 val sort : kotlin.String = updated_at // kotlin.String | Sort criteria. Can be one of: key_name, created_at, updated_at.
 val order : kotlin.String = desc // kotlin.String | Order direction. Can be one of: asc, desc.
-val q : kotlin.String = PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center // kotlin.String | q_description_placeholder
+val q : kotlin.String = PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center // kotlin.String | Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
 try {
     val result : kotlin.Array<Translation> = apiInstance.translationsByLocale(projectId, localeId, xminusPhraseAppMinusOTP, page, perPage, branch, sort, order, q)
     println(result)
@@ -610,7 +610,7 @@ Name | Type | Description  | Notes
  **branch** | **kotlin.String**| specify the branch to use | [optional]
  **sort** | **kotlin.String**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional]
  **order** | **kotlin.String**| Order direction. Can be one of: asc, desc. | [optional]
- **q** | **kotlin.String**| q_description_placeholder | [optional]
+ **q** | **kotlin.String**| Specify a query to find translations by content (including wildcards).&lt;br&gt;&lt;br&gt; The following qualifiers are supported in the query:&lt;br&gt; &lt;ul&gt;   &lt;li&gt;&lt;code&gt;id:translation_id,...&lt;/code&gt; for queries on a comma-separated list of ids&lt;/li&gt;   &lt;li&gt;&lt;code&gt;unverified:{true|false}&lt;/code&gt; for verification status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;tags:XYZ&lt;/code&gt; for tags on the translation&lt;/li&gt;   &lt;li&gt;&lt;code&gt;excluded:{true|false}&lt;/code&gt; for exclusion status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;updated_at:{&gt;&#x3D;|&lt;&#x3D;}2013-02-21T00:00:00Z&lt;/code&gt; for date range queries&lt;/li&gt; &lt;/ul&gt; Find more examples &lt;a href&#x3D;\&quot;#overview--usage-examples\&quot;&gt;here&lt;/a&gt;.  | [optional]
 
 ### Return type
 
@@ -767,7 +767,7 @@ val perPage : kotlin.Int = 10 // kotlin.Int | allows you to specify a page size 
 val branch : kotlin.String = my-feature-branch // kotlin.String | specify the branch to use
 val sort : kotlin.String = updated_at // kotlin.String | Sort criteria. Can be one of: key_name, created_at, updated_at.
 val order : kotlin.String = desc // kotlin.String | Order direction. Can be one of: asc, desc.
-val q : kotlin.String = PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center // kotlin.String | q_description_placeholder
+val q : kotlin.String = PhraseApp*%20unverified:true%20excluded:true%20tags:feature,center // kotlin.String | Specify a query to find translations by content (including wildcards).<br><br> The following qualifiers are supported in the query:<br> <ul>   <li><code>id:translation_id,...</code> for queries on a comma-separated list of ids</li>   <li><code>tags:XYZ</code> for tags on the translation</li>   <li><code>unverified:{true|false}</code> for verification status</li>   <li><code>excluded:{true|false}</code> for exclusion status</li>   <li><code>updated_at:{>=|<=}2013-02-21T00:00:00Z</code> for date range queries</li> </ul> Find more examples <a href=\"#overview--usage-examples\">here</a>. 
 try {
     val result : kotlin.Array<Translation> = apiInstance.translationsList(projectId, xminusPhraseAppMinusOTP, page, perPage, branch, sort, order, q)
     println(result)
@@ -791,7 +791,7 @@ Name | Type | Description  | Notes
  **branch** | **kotlin.String**| specify the branch to use | [optional]
  **sort** | **kotlin.String**| Sort criteria. Can be one of: key_name, created_at, updated_at. | [optional]
  **order** | **kotlin.String**| Order direction. Can be one of: asc, desc. | [optional]
- **q** | **kotlin.String**| q_description_placeholder | [optional]
+ **q** | **kotlin.String**| Specify a query to find translations by content (including wildcards).&lt;br&gt;&lt;br&gt; The following qualifiers are supported in the query:&lt;br&gt; &lt;ul&gt;   &lt;li&gt;&lt;code&gt;id:translation_id,...&lt;/code&gt; for queries on a comma-separated list of ids&lt;/li&gt;   &lt;li&gt;&lt;code&gt;tags:XYZ&lt;/code&gt; for tags on the translation&lt;/li&gt;   &lt;li&gt;&lt;code&gt;unverified:{true|false}&lt;/code&gt; for verification status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;excluded:{true|false}&lt;/code&gt; for exclusion status&lt;/li&gt;   &lt;li&gt;&lt;code&gt;updated_at:{&gt;&#x3D;|&lt;&#x3D;}2013-02-21T00:00:00Z&lt;/code&gt; for date range queries&lt;/li&gt; &lt;/ul&gt; Find more examples &lt;a href&#x3D;\&quot;#overview--usage-examples\&quot;&gt;here&lt;/a&gt;.  | [optional]
 
 ### Return type
 
