@@ -1,5 +1,7 @@
 # com.phrase.client - Kotlin client library for Phrase API Reference
 
+___Archived in favour of Java package [https://github.com/phrase/phrase-java](https://github.com/phrase/phrase-java)___
+
 ## Requires
 
 * Kotlin 1.3.41
